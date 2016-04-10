@@ -1,0 +1,107 @@
+<html>
+	<head>
+
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<title>calculator JS</title>
+		
+	</head>
+	<body>
+		<form action="" name= cal>
+			<b style="color:green;">Result:<b><input name= result class="form-control" size=20/><br><br>
+			<input class= "btn btn-primary" type = button name= "b0" value = 0 onclick="Add(0)">
+			<input class= "btn btn-primary" type = button name= "b1" value = 1 onclick="Add(1)">
+			<input class= "btn btn-primary" type = button name= "b2" value = 2 onclick="Add(2)">
+			<input class= "btn btn-primary" type = button name="addition" value = "+" onclick="Addition()" >
+			<input class= "btn btn-primary" type = button name = "subtr" value= "-" onclick = "Subtraction()">
+			<br>
+			 <input class= "btn btn-primary" type=button name ="b3" value = 3 onclick = "Add(3)"> 
+			 <input class= "btn btn-primary" type=button name ="b4" value = 4 onclick = "Add(4)"> 
+			 <input class= "btn btn-primary" type=button name ="b5" value = 5 onclick = "Add(5)">
+			 <input class= "btn btn-primary" type = button name = "multiply" value ="*" onclick = "Multiplication()"> 
+			 <input class= "btn btn-primary" type= button name = "divide" value = "/" onclick = "Division()">
+			
+			 <br>
+			 <input class= "btn btn-primary" type=button name ="b6" value = 6 onclick = "Add(6)"> 
+			 <input class= "btn btn-primary" type=button name ="b7" value = 7 onclick = "Add(7)"> 
+			 <input class= "btn btn-primary" type=button name ="b8" value = 8 onclick = "Add(8)"> 
+			 <input class= "btn btn-danger" type = button name = "clear" value = clear
+			onclick = "document.cal.result.value = ' ';"
+			 >
+			 <br>
+			 <input class= "btn btn-primary" type=button name ="b9" value = 9 onclick = "Add(9)"> 
+			 <input class= "btn " type = button name = "equal" value = "=" onclick="Equal()">
+			 <input class= "btn btn-primary" type = button name = "modulus" value= "%" onclick = "Modulus()">
+			 <input class= "btn btn-primary" type=button name= "dot" value = " . "  onclick="addDot()"  >
+			 
+
+		</form>
+		
+		<script language ="javascript">
+			var x, op;
+
+			function Add(I){
+				document.cal.result.value = document.cal.result.value+I;
+			}
+
+			function Addition(){
+				x = document.cal.result.value;
+				document.cal.result.value = " ";
+				op = "+";
+
+
+			}
+			function Subtraction(){
+				x = document.cal.result.value;
+				document.cal.result.value = " ";
+				op = "-";
+			}
+			function Modulus(){
+				x = document.cal.result.value;
+				document.cal.result.value = " ";
+				op = "%";
+			}
+			function Multiplication(){
+				x = document.cal.result.value;
+				document.cal.result.value = " ";
+				op = "*";
+			}
+
+			function Division(){
+				x = document.cal.result.value;
+				document.cal.result.value = " ";
+				op = "/";
+			}
+
+			function addDot(){
+				 var temp= document.cal.result.value; 
+				temp+=".";
+				document.cal.result.value=temp;
+			}
+
+			function Equal(){
+				if(op =="+"){
+					document.cal.result.value = parseFloat(document.cal.result.value)+parseFloat(x);
+				}else if(op =="-"){
+					document.cal.result.value = parseFloat(x) - parseFloat(document.cal.result.value);
+			}else if(op == "*"){
+				document.cal.result.value = parseFloat(x) * parseFloat(document.cal.result.value);
+
+			}else if(op == "/"){
+				document.cal.result.value = parseFloat(x)/ parseFloat(document.cal.result.value);
+			}else if(op == "%"){
+				document.cal.result.value = parseInt(x) % parseInt(document.cal.result.value);
+			}
+		}
+
+		</script>
+
+	</body>
+</html>

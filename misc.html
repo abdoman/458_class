@@ -1,0 +1,36 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<script type= "text/javascript">
+			function person(name,age){
+				this.name = name;
+				this.age = age;
+				this.changeName = function(c){ this.name = c};
+				this.add10 = function(){this.age = 10+age};
+				this.birthday = yearBorn;
+
+
+			}
+
+			function yearBorn(){
+				return 2015- this.age;
+			}
+
+			var sam = new person("sammy", 23);
+			document.write(sam.name+ " "+sam.age +"<br>"); 
+			sam.changeName("dave");
+			document.write(sam.name+ " "+sam.age + "<br>");
+			sam.add10();
+			document.write(sam.name+ " "+sam.age +"<br>");
+			document.write(sam.birthday() + "<br>");
+			document.write(Math.sqrt(81) + "<br>");
+			var d = new Date();
+			document.write(d+"<br>");
+			d= new Date(1989,9,29,0,0,0,0);
+			document.write(d + "<br>");
+		</script>
+	</body>
+</html>

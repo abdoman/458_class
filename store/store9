@@ -1,0 +1,1052 @@
+
+
+sub More_Country_Initialize
+{
+
+=begin comment
+
+%hosts=("base" => "http://localhost/server/market",
+               "albuquerque" => "http://localhost/server/market",
+                 "altanta"        => "http://localhost/server/market",
+                    "austin"      => "http://localhost/server/market",
+              "baltimore"      => "http://localhost/server/market",
+              "boston"           => "http://localhost/server/market",
+               "charlotte"       => "http://localhost/server/market",
+                "chicago"        => "http://localhost/server/market",
+             "cincinnati"        => "http://localhost/server/market",
+              "cleveland"        => "http://localhost/server/market",
+              "columbus"       => "http://localhost/server/market",
+           "dallasftworth"    => "http://localhost/server/market",
+         "denverboulder"    => "http://localhost/server/market",
+                    "detroit"     => "http://localhost/server/market",
+                  "houston"     => "http://localhost/server/market",
+            "indianapolis"    => "http://localhost/server/market",
+                    "kc"            => "http://localhost/server/market",
+             "lasvegas"         => "http://localhost/server/market",
+            "littlerock"         => "http://localhost/server/market",
+             "losangeles"      => "http://localhost/server/market",
+              "memphis"       => "http://localhost/server/market",
+                  "miami"       => "http://localhost/server/market",
+           "milwaukee"       => "http://localhost/server/market",
+"minneapolisstpaul"      => "http://localhost/server/market",
+               "montreal"      => "http://localhost/server/market",
+               "nashville"      => "http://localhost/server/market",
+              "newhaven"     => "http://localhost/server/market",
+               "newyork"      => "http://localhost/server/market",
+       "oklahomacity"      => "http://localhost/server/market",
+                "orlando"     => "http://localhost/server/market",
+                  "ottawa"     => "http://localhost/server/market",
+         "philadelphia"     => "http://localhost/server/market",
+                "phoenix"     => "http://localhost/server/market",
+             "pittsburgh"    => "http://localhost/server/market",
+             "portland"       => "http://localhost/server/market",
+          "puertorico"       => "http://localhost/server/market",
+"raleighdurhamchapelhill" => "http://localhost/server/market",
+           "renotahoe"          => "http://localhost/server/market",
+            "rochester"          => "http://localhost/server/market",
+         "sacramento"          => "http://localhost/server/market",
+         "saltlakecity"         => "http://localhost/server/market",
+          "sanantonio"       => "http://localhost/server/market",
+             "sandiego"        => "http://localhost/server/market",
+       "sanfrancisco"        => "http://localhost/server/market",
+               "sanjose"        => "http://localhost/server/market",
+                "santafe"       => "http://localhost/server/market",
+                 "seattle"       => "http://localhost/server/market",
+              "spokane"       => "http://localhost/server/market",
+                "stlouis"       => "http://localhost/server/market",
+                 "tampa"       => "http://localhost/server/market",
+               "toronto"       => "http://localhost/server/market",
+                "tucson"       => "http://localhost/server/market",
+          "vancouver"       => "http://localhost/server/market",
+     "washingtondc"      => "http://localhost/server/market",
+         "wilmington"      => "http://localhost/server/market",
+   );
+
+
+%cookiedomains= ("base" =>"",
+               "albuquerque" =>"",
+                 "altanta"        =>"",
+                    "austin"      =>"",
+              "baltimore"      =>"",
+              "boston"           =>"",
+               "charlotte"       =>"",
+                "chicago"        =>"",
+             "cincinnati"        =>"",
+              "cleveland"        =>"",
+              "columbus"       =>"",
+           "dallasftworth"    =>"",
+         "denverboulder"    =>"",
+                    "detroit"     =>"",
+                  "houston"     =>"",
+            "indianapolis"    =>"",
+                    "kc"            =>"",
+             "lasvegas"         =>"",
+            "littlerock"         =>"",
+             "losangeles"      =>"",
+              "memphis"       =>"",
+                  "miami"       =>"",
+           "milwaukee"       =>"",
+"minneapolisstpaul"      =>"",
+               "montreal"      =>"",
+               "nashville"      =>"",
+              "newhaven"     =>"",
+               "newyork"      =>"",
+       "oklahomacity"      =>"",
+                "orlando"     =>"",
+                  "ottawa"     =>"",
+         "philadelphia"     =>"",
+                "phoenix"     =>"",
+             "pittsburgh"    =>"",
+             "portland"       =>"",
+          "puertorico"       =>"",
+"raleighdurhamchapelhill" =>"",
+           "renotahoe"          =>"",
+            "rochester"          =>"",
+         "sacramento"          =>"",
+         "saltlakecity"         =>"",
+          "sanantonio"        =>"",
+             "sandiego"        =>"",
+       "sanfrancisco"        =>"",
+               "sanjose"        =>"",
+                "santafe"       =>"",
+                 "seattle"       =>"",
+              "spokane"       =>"",
+                "stlouis"       =>"",
+                 "tampa"       =>"",
+               "toronto"       =>"",
+                "tucson"       =>"",
+          "vancouver"       =>"",
+     "washingtondc"     =>"",
+         "wilmington"      =>"",
+);
+
+%cookiepaths= ( "base" =>"",
+               "albuquerque" =>"",
+                 "altanta"        =>"",
+                    "austin"      =>"",
+              "baltimore"      =>"",
+              "boston"           =>"",
+               "charlotte"       =>"",
+                "chicago"        =>"",
+             "cincinnati"        =>"",
+              "cleveland"        =>"",
+              "columbus"       =>"",
+           "dallasftworth"    =>"",
+         "denverboulder"    =>"",
+                    "detroit"     =>"",
+                  "houston"     =>"",
+            "indianapolis"    =>"",
+                    "kc"            =>"",
+             "lasvegas"         =>"",
+            "littlerock"         =>"",
+             "losangeles"      =>"",
+              "memphis"       =>"",
+                  "miami"       =>"",
+           "milwaukee"       =>"",
+"minneapolisstpaul"      =>"",
+               "montreal"      =>"",
+               "nashville"      =>"",
+              "newhaven"     =>"",
+               "newyork"      =>"",
+       "oklahomacity"      =>"",
+                "orlando"     =>"",
+                  "ottawa"     =>"",
+         "philadelphia"     =>"",
+                "phoenix"     =>"",
+             "pittsburgh"    =>"",
+             "portland"       =>"",
+          "puertorico"       =>"",
+"raleighdurhamchapelhill" =>"",
+           "renotahoe"          =>"",
+            "rochester"          =>"",
+         "sacramento"          =>"",
+         "saltlakecity"         =>"",
+          "sanantonio"        =>"",
+             "sandiego"        =>"",
+       "sanfrancisco"        =>"",
+               "sanjose"        =>"",
+                "santafe"       =>"",
+                 "seattle"       =>"",
+              "spokane"       =>"",
+                "stlouis"       =>"",
+                 "tampa"       =>"",
+               "toronto"       =>"",
+                "tucson"       =>"",
+          "vancouver"       =>"",
+     "washingtondc"     =>"",
+         "wilmington"      =>"",
+);
+
+
+=end comment
+=cut
+
+
+%hosts=( "base" => "http://www.fortyads.com/server/market",
+               "albuquerque" => "http://www.fortyads.com/server/market",
+                 "altanta"        => "http://www.fortyads.com/server/market",
+                    "austin"      => "http://www.fortyads.com/server/market",
+              "baltimore"      => "http://www.fortyads.com/server/market",
+              "boston"          => "http://www.fortyads.com/server/market",
+               "charlotte"      => "http://www.fortyads.com/server/market",
+                "chicago"       => "http://www.fortyads.com/server/market",
+             "cincinnati"       => "http://www.fortyads.com/server/market",
+              "cleveland"      => "http://www.fortyads.com/server/market",
+              "columbus"      => "http://www.fortyads.com/server/market",
+           "dallasftworth"   => "http://www.fortyads.com/server/market",
+         "denverboulder"    => "http://www.fortyads.com/server/market",
+                    "detroit"     => "http://www.fortyads.com/server/market",
+                  "houston"     => "http://www.fortyads.com/server/market",
+            "indianapolis"    => "http://www.fortyads.com/server/market",
+                    "kc"            => "http://www.fortyads.com/server/market",
+             "lasvegas"         => "http://www.fortyads.com/server/market",
+            "littlerock"         =>"http://www.fortyads.com/server/market",
+             "losangeles"      => "http://www.fortyads.com/server/market",
+              "memphis"       => "http://www.fortyads.com/server/market",
+                  "miami"       => "http://www.fortyads.com/server/market",
+           "milwaukee"       => "http://www.fortyads.com/server/market",
+"minneapolisstpaul"      => "http://www.fortyads.com/server/market",
+               "montreal"      => "http://www.fortyads.com/server/market",
+               "nashville"      => "http://www.fortyads.com/server/market",
+              "newhaven"    => "http://www.fortyads.com/server/market",
+               "newyork"      => "http://www.fortyads.com/server/market",
+       "oklahomacity"      => "http://www.fortyads.com/server/market",
+                "orlando"     => "http://www.fortyads.com/server/market",
+                  "ottawa"     => "http://www.fortyads.com/server/market",
+         "philadelphia"     => "http://www.fortyads.com/server/market",
+                "phoenix"     => "http://www.fortyads.com/server/market",
+             "pittsburgh"    => "http://www.fortyads.com/server/market",
+             "portland"       => "http://www.fortyads.com/server/market",
+          "puertorico"       => "http://www.fortyads.com/server/market",
+"raleighdurhamchapelhill" => "http://www.fortyads.com/server/market",
+           "renotahoe"          => "http://www.fortyads.com/server/market",
+            "rochester"          => "http://www.fortyads.com/server/market",
+         "sacramento"          => "http://www.fortyads.com/server/market",
+         "saltlakecity"         => "http://www.fortyads.com/server/market",
+          "sanantonio"        => "http://www.fortyads.com/server/market",
+             "sandiego"        => "http://www.fortyads.com/server/market",
+       "sanfrancisco"        => "http://www.fortyads.com/server/market",
+               "sanjose"        => "http://www.fortyads.com/server/market",
+                "santafe"       => "http://www.fortyads.com/server/market",
+                 "seattle"       => "http://www.fortyads.com/server/market",
+              "spokane"       => "http://www.fortyads.com/server/market",
+                "stlouis"       => "http://www.fortyads.com/server/market",
+                 "tampa"       => "http://www.fortyads.com/server/market",
+               "toronto"       => "http://www.fortyads.com/server/market",
+                "tucson"       => "http://www.fortyads.com/server/market",
+          "vancouver"       => "http://www.fortyads.com/server/market",
+     "washingtondc"     => "http://www.fortyads.com/server/market",
+         "wilmington"      => "http://www.fortyads.com/server/market",
+);
+
+
+
+%cookiedomains=("base" => ";domain=www.fortyads.com",
+               "albuquerque" => ";domain=www.fortyads.com",
+                 "altanta"       => ";domain=www.fortyads.com",
+                    "austin"      => ";domain=www.fortyads.com",
+              "baltimore"      => ";domain=www.fortyads.com",
+              "boston"           => ";domain=www.fortyads.com",
+               "charlotte"       => ";domain=www.fortyads.com",
+                "chicago"        => ";domain=www.fortyads.com",
+             "cincinnati"        => ";domain=www.fortyads.com",
+              "cleveland"        => ";domain=www.fortyads.com",
+              "columbus"       => ";domain=www.fortyads.com",
+           "dallasftworth"    => ";domain=www.fortyads.com",
+         "denverboulder"    => ";domain=www.fortyads.com",
+                    "detroit"     => ";domain=www.fortyads.com",
+                  "houston"     => ";domain=www.fortyads.com",
+            "indianapolis"    => ";domain=www.fortyads.com",
+                    "kc"            => ";domain=www.fortyads.com",
+             "lasvegas"         => ";domain=www.fortyads.com",
+            "littlerock"         => ";domain=www.fortyads.com",
+             "losangeles"      => ";domain=www.fortyads.com",
+              "memphis"       => ";domain=www.fortyads.com",
+                  "miami"       => ";domain=www.fortyads.com",
+           "milwaukee"       => ";domain=www.fortyads.com",
+"minneapolisstpaul"      => ";domain=www.fortyads.com",
+               "montreal"      => ";domain=www.fortyads.com",
+               "nashville"     => ";domain=www.fortyads.com",
+              "newhaven"     => ";domain=www.fortyads.com",
+               "newyork"      => ";domain=www.fortyads.com",
+       "oklahomacity"      => ";domain=www.fortyads.com",
+                "orlando"     => ";domain=www.fortyads.com",
+                  "ottawa"     => ";domain=www.fortyads.com",
+         "philadelphia"     => ";domain=www.fortyads.com",
+                "phoenix"     => ";domain=www.fortyads.com",
+             "pittsburgh"    => ";domain=www.fortyads.com",
+             "portland"       => ";domain=www.fortyads.com",
+          "puertorico"       => ";domain=www.fortyads.com",
+"raleighdurhamchapelhill" => ";domain=www.fortyads.com",
+           "renotahoe"          => ";domain=www.fortyads.com",
+            "rochester"          => ";domain=www.fortyads.com",
+         "sacramento"          => ";domain=www.fortyads.com",
+         "saltlakecity"         => ";domain=www.fortyads.com",
+          "sanantonio"        => ";domain=www.fortyads.com",
+             "sandiego"        => ";domain=www.fortyads.com",
+       "sanfrancisco"        => ";domain=www.fortyads.com",
+               "sanjose"        => ";domain=www.fortyads.com",
+                "santafe"       => ";domain=www.fortyads.com",
+                 "seattle"       => ";domain=www.fortyads.com",
+              "spokane"       => ";domain=www.fortyads.com",
+                "stlouis"       => ";domain=www.fortyads.com",
+                 "tampa"       => ";domain=www.fortyads.com",
+               "toronto"       => ";domain=www.fortyads.com",
+                "tucson"       => ";domain=www.fortyads.com",
+          "vancouver"       => ";domain=www.fortyads.com",
+     "washingtondc"     => ";domain=www.fortyads.com",
+         "wilmington"      => ";domain=www.fortyads.com",
+ );
+
+
+%cookiepaths= ("base"  =>  ";path=/",
+               "albuquerque" =>  ";path=/",
+                 "altanta"        =>  ";path=/",
+                    "austin"      =>  ";path=/",
+              "baltimore"      =>  ";path=/",
+              "boston"           =>  ";path=/",
+               "charlotte"       =>  ";path=/",
+                "chicago"        =>  ";path=/",
+             "cincinnati"        =>  ";path=/",
+              "cleveland"       =>  ";path=/",
+              "columbus"       =>  ";path=/",
+           "dallasftworth"    =>  ";path=/",
+         "denverboulder"    =>  ";path=/",
+                    "detroit"     =>  ";path=/",
+                  "houston"     =>  ";path=/",
+            "indianapolis"    =>  ";path=/",
+                    "kc"            =>  ";path=/",
+             "lasvegas"         =>  ";path=/",
+            "littlerock"         =>  ";path=/",
+             "losangeles"      =>  ";path=/",
+              "memphis"       =>  ";path=/",
+                  "miami"       =>  ";path=/",
+           "milwaukee"       =>  ";path=/",
+"minneapolisstpaul"      =>  ";path=/",
+               "montreal"      =>  ";path=/",
+               "nashville"      =>  ";path=/",
+              "newhaven"     =>  ";path=/",
+               "newyork"      =>  ";path=/",
+       "oklahomacity"      =>  ";path=/",
+                "orlando"     =>  ";path=/",
+                  "ottawa"     =>  ";path=/",
+         "philadelphia"     =>  ";path=/",
+                "phoenix"     =>  ";path=/",
+             "pittsburgh"    =>  ";path=/",
+             "portland"       =>  ";path=/",
+          "puertorico"       =>  ";path=/",
+"raleighdurhamchapelhill" =>  ";path=/",
+           "renotahoe"          =>  ";path=/",
+            "rochester"          =>  ";path=/",
+         "sacramento"          =>  ";path=/",
+         "saltlakecity"         =>  ";path=/",
+          "sanantonio"        =>  ";path=/",
+             "sandiego"        =>  ";path=/",
+       "sanfrancisco"        =>  ";path=/",
+               "sanjose"        =>  ";path=/",
+                "santafe"       =>  ";path=/",
+                 "seattle"       =>  ";path=/",
+              "spokane"       =>  ";path=/",
+                "stlouis"       =>  ";path=/",
+                 "tampa"       =>  ";path=/",
+               "toronto"       =>  ";path=/",
+                "tucson"       =>  ";path=/",
+          "vancouver"       =>  ";path=/",
+     "washingtondc"     =>  ";path=/",
+         "wilmington"      =>  ";path=/",
+   );
+
+
+#$fileprefix: product files, $httpprefix: common include, $dbprefix: db files.
+#imageprefix: product images, $codeprefix: cgi-bin.
+
+$fileprefix =  "../../../serverdata/market/classify";
+$imageprefix = "../image";
+$opprefix = "../../../serverdata/market/marketop";
+$opimageprefix = "../marketop";
+$codeprefix="/cgi-bin/";
+
+$customerdirectory = "test";
+$purchasedirectory = "test";
+
+#$emailprefix was originally the same as $httpprefix. It is used now 
+#to override the browser's blocking setting. Currently only used in b1done.pl
+$emailprefix = "http://www.university.uphero.com";
+
+#$fileprefix = "../httpdocs/autoop";
+#$httpprefix = "../autoop";
+
+}
+
+
+sub Country_Initialize
+{
+local (*in) = shift if @_;    # CGI input
+
+
+#es=("albuquerque", "altanta", "austin", "baltimore", "boston", "charlotte", "chicago", "cincinnati", 
+#"cleveland", "columbus", "dallasftworth", "denverboulder", "detroit", "houston", 
+#"indianapolis", "kc", "lasvegas", "littlerock", "losangeles", "memphis", "miami",
+#"milwaukee", "minneapolisstpaul", "montreal", "nashville", "newhaven", "newyork", "oklahomacity", #"orlando", 
+#"ottawa", "philadelphia", "phoenix", "pittsburgh", "portland", "puertorico", "raleighdurhamchapelhill", #"renotahoe", "rochester", "sacramento", "saltlakecity", "sanantonio", "sandiego", "sanfrancisco", "sanjose", #"santafe", "seattle", "spokane", "stlouis", "tampa", "toronto", "tucson", 
+#"vancouver", "washingtondc", "wilmington");
+#array of one element, kc is used in the program
+@cities=("kc");
+
+#@cityname=("Albuquerque", "Atlanta", "Austin", "Baltimore", "Boston", "Charlotte", "Chicago", #"Cincinnati", "Cleveland", "Columbus", "Dallas/Ft. Worth", "Denver/Boulder", "Detroit", "Houston", 
+#"Indianapolis", "Kansas City", "Las Vegas", "Little Rock", "Los Angeles", "Memphis", "Miami",
+#"Milwaukee", "Minneapolis/St Paul", "Montreal", "Nashville", "New Haven", "New York", "Oklahoma #City", "Orlando", "Ottawa", "Philadelphia", "Phoenix", "Pittsburgh", "Portland", "Puerto Rico", "Raleigh-#Durham-Chapel Hill", "Reno/Tahoe", "Rochester", "Sacramento", "Salt Lake City", "San Antonio", "San #Diego", "San Francisco", "San Jose", "Santa Fe", "Seattle", "Spokane", "St. Louis", "Tampa", "Toronto", #"Tucson", 
+#"Vancouver", "Washington DC", "Wilmington");
+#city name shown on website;;
+@cityname=("$lang{'Kansas City'}");
+
+######End Auto Work Section, Start Common Section
+
+@provincestatearr =("NA", 
+                   "Other",
+                   "Washington DC",
+                   "AB",                          #  <!-- Alberta -->
+                   "AL",                          #  <!-- Alabama -->
+                   "AK",                          #  <!-- Alaska -->
+                   "AR",                           #  <!-- Arkansas -->
+                   "AZ",                           #  <!-- Arizona -->
+                   "BC",                           #  <!-- British Columbia -->
+                   "CA",                           #  <!-- California -->
+                   "CO",                           #  <!-- Colorado -->
+                   "CT",                           #  <!-- Connecticut -->
+                   "DE",                           #  <!-- Delaware -->
+                   "FL",                            # <!-- Florida -->
+                   "GA",                           #  <!-- Georgia -->
+                   "HI",                            #  <!--Hawaii -->
+                   "IA",                            #   <!-- Iowa -->
+                   "ID",                            #   <!-- Idaho -->
+                   "IL",                             #   <!-- Illinois -->
+                   "IN",                             # <!-- Indiana -->
+                   "KS",                            # <!-- Kansas --> 
+                   "KY",                           # <!-- Kentucky -->
+                   "LA",                            #  <!-- Louisiana -->
+                   "MA",                           #  <!-- Massachusetts -->
+                   "MB",                           #  <!-- Manitoba -->
+                    "MD",                          #  <!-- Maryland -->
+                    "ME",                          #   <!-- Maine -->
+                    "MI",                           #    <!-- Michigan -->
+                    "MN",                         #  <!-- Minnesota -->
+                    "MO",                         #   <!-- Missouri -->
+                    "MS",                          #   <!-- Mississippi -->
+                    "MT",                          #  <!-- Montana  -->
+                    "NB",                          #   <!-- New Brunswick -->
+                    "NC",                          #   <!-- North Carolina -->
+                    "ND",                          #  <!-- North Dakota -->
+                    "NE",                          #  <!-- Nebraska --> 
+                    "NF",                          #  <!-- Newfoundland -->
+                    "NH",                         # <!-- New Hampshire -->
+                    "NJ",                          #   <!-- New Jersy -->
+                    "NM",                        #  <!-- New Mexico -->
+                    "NT",                         #   <!-- Northwest Territories -->
+                    "NS",                         #   <!-- Nova Scotia -->
+                    "NV",                         #  <!-- Nevada -->
+                    "NY",                         #  <!-- New York -->
+                    "OH",                         #  <!-- Ohio -->
+                    "OK",                         # <!-- Oklahoma --> 
+                    "ON",                         # <!-- Ontario -->
+                    "OR",                         #  <!-- Oregan -->
+                    "PA",                         #   <!-- Pennsylvania --> 
+                    "PE",                          #  <!-- Prince Edward Island -->
+                    "PQ",                         #   <!-- Quebec -->
+                    "RI",                          #   <!-- Phode Island -->
+                    "SC",                         #   <!-- South Carolina --> 
+                    "SD",                         #   <!-- South Dakota -->
+                    "SK",                         #   <!-- Saskatchewan -->
+                    "TN",                         #   <!-- Tennessee -->
+                    "TX",                         #   <!-- Texas -->
+                    "UT",                         #  <!-- Utah -->
+                    "VA",                        #   <!-- Virginia -->
+                    "VT",                         #   <!-- Vermont -->
+                    "WA",                        #  <!-- Washington -->
+                    "WI",                         #   <!-- Wisconsin -->
+                    "WV",                       #  <!-- West Virginia -->
+                    "WY",                       #  <!-- Wyoming -->
+                    "YK"                         #  <!-- Yukon -->
+);
+
+#names for using as keys in english file
+@classifyarrayname=("$lang{'Appliances'}","$lang{'Cat Care'}","$lang{'Dog Care'}", "$lang{'Bath'}", "$lang{'Building Materials'}", 
+"$lang{'Door & Windows'}", "$lang{'Electrical'}",  
+"$lang{'Flooring'}",  "$lang{'Heating & Cooling'}", "$lang{'Kitchen'}", "$lang{'Lighting & Ceiling Fans'}", "$lang{'Lumber & Composites'}", "$lang{'Outdoors'}", "$lang{'Paint'}", "$lang{'Plumbing'}", 
+"$lang{'Storage & Organization'}", "$lang{'Tools'}");
+
+#internal use names lower case and no spaces--associative position dependency with the above array
+@classifyarray=("appliances","catstuff","dogstuff", "bath", "buildingmaterials", "doorandwindows", "electrical", "flooring", "heatingandcooling",  "kitchen", "lightingandceilingfans", 
+"lumberandcomposites", "outdoors", "paint", "plumbing", "storageandorganization", "tools");
+
+$defaultclassifyarrayname="$lang{'Appliances'}";
+$defaultclassifyarray="appliances";
+
+#% means hash 
+%categoryarray=("appliances" => ["appliancespartsandaccessories", 
+                                       "dishwashers",
+                                       "freezers",
+                                       "garbagedisposals",
+                                       "microwaves",
+                                       "rangehoods",
+                                       "ranges",
+                                       "smallappliances",
+                                       "vacuums",
+                                       "ovens",
+                                       "washersanddryers",
+                                       "watercoolers"],
+                "catstuff" =>["catmeals",
+                "cattoys",
+                "catmedications",
+                "cathomes",
+                "catmobilehomes",
+                "catstands",
+                "catboxes"],
+
+                "bath" =>  ["bathroomcabinets", 
+                                "bathroomfans",
+                                "faucets",
+                                "mirrors",
+                                "sinks",
+                                "bathtubs",
+                                "showersandshoweraccessories",
+                                "toiletsandtoiletseats"],
+
+                "buildingmaterials" => ["ceilings", 
+                                                   "concretecementandmasonry", 
+                                                   "decking", 
+                                                   "drywall", 
+                                                   "fireplaceaccessories",
+                                                   "glassandacrylic",
+                                                   "insulationandaccessories",
+                                                   "ladders",
+                                                   "lumber",
+                                                   "mouldingandwallpanels",
+                                                   "roofingandgutters",
+                                                   "sidingandstoneveneer",
+                                                   "stairsandrailings",
+                                                   "ventilation"],
+
+                "doorandwindows" => ["awningsandaccessories",
+                            "doors", 
+                            "exteriorshuttersandaccessories", 
+                            "garagedoorsandopeners", 
+                            "windows"], 
+
+       "electrical"=> ["batteries", "cableandwireconnectors", 
+                       "circuitbreakers",
+                       "conduitandconduitfittings", 
+                            "dimmersandswitches", "doorbells",
+                            "electricalboxesandcovers",
+                            "electricaloutlesandadapters",
+                            "electricaltools",
+                            "extensioncords",
+                            "generators",
+                            "lightsockets",
+                            "wallplates"
+],
+
+          "flooring" => ["carpet", 
+                            "floormoulding", 
+                            "flooringtools",
+                            "hardwoodflooring",
+                            "rugs",
+                            "tileandstone",
+                            "vinylflooring"],
+
+          "heatingandcooling" => ["airconditioners", 
+                            "airfilters",
+                            "airpurifiers",
+                            "atticventilation",
+                            "fireplaces",
+                            "heaters", 
+                            "humidifiersanddehumidifiers",
+                            "thermostats"],
+
+          "kitchen"=> ["kitchenfaucets", "kitchensinks",
+                       "kitchencabinets",
+                       "kitchencountertops",
+                       "kitchenwalltiles"] ,
+
+
+          "lightingandceilingfans" => ["bathroomlighting",
+                                       "ceilingfans",
+                                       "ceilinglights",
+                                       "chandeliersandpendantlighting",
+                                       "kitchenlighting",
+                                       "lampsandlampshades",
+                                       "landscapelighting",
+                                       "lightingbulbs",
+                                       "timers"
+                                    ],
+ 
+          "lumberandcomposites" => ["boards",
+                                    "decking",
+                                    "fencing",
+                                    "paneling",
+                                    "plywoodandsheathing",
+                                    "shimsandwoodshingles",
+                                    "timber"],
+
+          "outdoors" => ["animalandpetcare", "birdcare",
+                         "grills",
+                         "hottubs",
+                         "patiofurniture",
+                         "playsetsandswingsets",
+                         "pools"],
+
+               "paint"  =>  ["caulking", "cleaners", "dropclothsandsheeting", "gluesandtapes", "paintandprimer", "paintbrushesrollersandkits", "paintcleanup", 
+                               "paintsprayers", "patching", "sanding",  
+                               "scrapersbladesandtools", "stainsandsealers", "thinnersandremovers"],
+
+        "plumbing"  => ["augersplungersdrainopeners", "laudrytubsandfaucets", "pipes", "plumbingtools", "pumpsandtanks", "valves", "waterfiltrationandwatersoftners", "waterheaters"],
+ 
+  "storageandorganization"  => ["closetstorage", "foldingtablesandchairs", "garagestorage", "hooksandracks",  "laudrystorage", "movingboxesandsupplies", 
+"officestorage", "shelves", "storagetotesandbaskets"],
+
+        "tools"  => ["airtoolsandcompressors", "drillanddrillbits", "greaseguns", "grindersandpolishers", "handtools", "joinersandplaners", "measuringtools", "nailersandstaplers", "powersawsandsawblades", "pressesandlathes", 
+"rotarytoolsandoscillatingtools", "routersandrouterbits", "sandersandsandpaper",
+"toolbatteriesandchargers", "weldingandcutting"],
+
+);
+
+%defaultcategoryarray=(
+                       "appliances" => ["appliancespartsandaccessories"],
+                       "bath" =>  ["faucets"],
+                       "buildingmaterials" => ["concretecementandmasonry"],
+                       "doorandwindows" => ["windows"],
+                       "electrical"=> ["electricalboxesandcovers"],
+                       "flooring" => ["carpet"],
+                       "heatingandcooling" => ["airfilters"],
+                       "kitchen"=> ["kitchenfaucets"],
+                       "lightingandceilingfans" => ["lightingbulbs"],
+                       "lumberandcomposites" => ["timber"],
+                       "outdoors" => ["patiofurniture"],
+                       "paint"  =>  ["caulking"],
+                       "plumbing"  => ["waterheaters"],
+                       "storageandorganization"  => ["closetstorage"],
+                       "tools"  => ["airtoolsandcompressors"],
+                        
+);
+
+%categoryarrayname=("appliances" => ["$lang{'Appliances Parts & Accessories'}", 
+                                       "$lang{'Dishwashers'}",
+                                       "$lang{'Freezers'}",
+                                       "$lang{'Garbage Disposals'}",
+                                       "$lang{'Microwaves'}",
+                                       "$lang{'Range Hoods'}",
+                                       "$lang{'Ranges'}",
+                                       "$lang{'Small Appliances'}",
+                                       "$lang{'Vacuums'}",
+                                       "$lang{'Ovens'}",
+                                       "$lang{'Washers & Dryers'}",
+                                       "$lang{'Water Coolers'}"],
+                "catstuff"=>["$lang{'Cat Meals'}",
+                "$lang{'Cat Toys'}",
+                "$lang{'Cat Medications'}",
+                "$lang{'Cat Homes'}",
+                "$lang{'Cat Mobile Homes'}",
+                "$lang{'Cat Stands'}",
+                "$lang{'Cat Boxes'}"
+                ],
+                "bath" =>  ["$lang{'Bathroom Cabinets'}", 
+                                "$lang{'Bathroom Fans'}",
+                                "$lang{'Faucets'}",
+                                "$lang{'Mirrors'}",
+                                "$lang{'Sinks'}",
+                                "$lang{'Bathtubs'}",
+                                "$lang{'Showers & Shower Accessories'}",
+                                "$lang{'Toilets & Toilet Seats'}"],
+
+                "buildingmaterials" => ["$lang{'Ceilings'}", 
+                                                   "$lang{'Concrete Cement & Masonry'}", 
+                                                   "$lang{'Decking'}", 
+                                                   "$lang{'Drywall'}", 
+                                                   "$lang{'Fireplace Accessories'}",
+                                                   "$lang{'Glass & Acrylic'}",
+                                                   "$lang{'Insulation & Accessories'}",
+                                                   "$lang{'Ladders'}",
+                                                   "$lang{'Lumber'}",
+                                                   "$lang{'Moulding & Wallpanels'}",
+                                                   "$lang{'Roofing & Gutters'}",
+                                                   "$lang{'Siding & Stone Veneer'}",
+                                                   "$lang{'Stairs & Ailings'}",
+                                                   "$lang{'Ventilation'}"],
+
+                "doorandwindows" => ["$lang{'Awnings & Accessories'}",
+                            "$lang{'Doors'}", 
+                            "$lang{'Exterior Shutters & Accessories'}", 
+                            "$lang{'Garage Doors & Openers'}", 
+                            "$lang{'Windows'}"], 
+
+       "electrical"=> ["$lang{'Batteries'}", "$lang{'Cable & Wire Connectors'}", 
+                       "$lang{'Circuit Breakers'}",
+                       "$lang{'Conduit & Conduit Fittings'}", 
+                            "$lang{'Dimmers & Switches'}", "$lang{'Door Bells'}",
+                            "$lang{'Electrical Boxes & Covers'}",
+                            "$lang{'Electrical Outles & Adapters'}",
+                            "$lang{'Electrical Tools'}",
+                            "$lang{'Extension Cords'}",
+                            "$lang{'Generators'}",
+                            "$lang{'Light Sockets'}",
+                            "$lang{'Wall Plates'}"
+],
+
+          "flooring" => ["$lang{'Carpet'}", 
+                            "$lang{'Floor Moulding'}", 
+                            "$lang{'Flooring Tools'}",
+                            "$lang{'Hardwood Flooring'}",
+                            "$lang{'Rugs'}",
+                            "$lang{'Tile & Stone'}",
+                            "$lang{'Vinyl Flooring'}"],
+
+          "heatingandcooling" => ["$lang{'Air Conditioners'}", 
+                            "$lang{'Air Filters'}",
+                            "$lang{'Air Purifiers'}",
+                            "$lang{'Attic Ventilation'}",
+                            "$lang{'Fireplaces'}",
+                            "$lang{'Heaters'}", 
+                            "$lang{'Humidifiers & Dehumidifiers'}",
+                            "$lang{'Thermostats'}"],
+
+          "kitchen"=> ["$lang{'Kitchen Faucets'}", "$lang{'Kitchen Sinks'}",
+                       "$lang{'Kitchen Cabinets'}",
+                       "$lang{'Kitchen Countertops'}",
+                       "$lang{'Kitchen Wall Tiles'}"] ,
+
+
+          "lightingandceilingfans" => ["$lang{'Bathroom Lighting'}",
+                                       "$lang{'Ceiling Fans'}",
+                                       "$lang{'Ceiling Lights'}",
+                                       "$lang{'Chandeliers & Pendant Lighting'}",
+                                       "$lang{'Kitchen Lighting'}",
+                                       "$lang{'Lamps & Lamp Shades'}",
+                                       "$lang{'Landscape Lighting'}",
+                                       "$lang{'Lighting Bulbs'}",
+                                       "$lang{'Timers'}"
+                                    ],
+ 
+          "lumberandcomposites" => ["$lang{'Boards'}",
+                                    "$lang{'Decking'}",
+                                    "$lang{'Fencing'}",
+                                    "$lang{'Paneling'}",
+                                    "$lang{'Plywood & Sheathing'}",
+                                    "$lang{'Shims & Wood Shingles'}",
+                                    "$lang{'Timber'}"],
+
+          "outdoors" => ["$lang{'Animal & Pet Care'}", "$lang{'Bird Care'}",
+                         "$lang{'Grills'}",
+                         "$lang{'Hot Tubs'}",
+                         "$lang{'Patio Furniture'}",
+                         "$lang{'Play Sets & Swing Sets'}",
+                         "$lang{'Pools'}"],
+
+               "paint"  =>  ["$lang{'Caulking'}", "$lang{'Cleaners'}", "$lang{'Drop Cloths & Sheeting'}", "$lang{'Glues & Tapes'}", "$lang{'Paint & Primer'}", "$lang{'Paint Brushes, Rollers & Kits'}", "$lang{'Paint Cleanup'}", 
+                               "$lang{'Paint Sprayers'}", "$lang{'Patching'}", "$lang{'Sanding'}",  
+                               "$lang{'Scrapers, Blades & Tools'}", "$lang{'Stains & Sealers'}", "$lang{'Thinners & Removers'}"],
+
+        "plumbing"  => ["$lang{'Augers, Plungers, Drain Openers'}", "$lang{'Laudry Tubs & Faucets'}", "$lang{'Pipes'}", "$lang{'Plumbing Tools'}", "$lang{'Pumps & Tanks'}", "$lang{'Valves'}", "$lang{'Water Filtration & Water Softners'}", "$lang{'Water Heaters'}"],
+ 
+  "storageandorganization"  => ["$lang{'Closet Storage'}", "$lang{'Folding Tables & Chairs'}", "$lang{'Garage Storage'}", "$lang{'Hooks & Racks'}",  "$lang{'Laudry Storage'}", "$lang{'Moving Boxes & Supplies'}", 
+"$lang{'Office Storage'}", "$lang{'Shelves'}", "$lang{'Storage Totes & Baskets'}"],
+
+        "tools"  => ["$lang{'Air Tools & Compressors'}", "$lang{'Drill & Drill Bits'}", "$lang{'Grease Guns'}", "$lang{'Grinders & Polishers'}", "$lang{'Hand Tools'}", "$lang{'Joiners & Planers'}", "$lang{'Measuring Tools'}", "$lang{'Nailers & Staplers'}", "$lang{'Power Saws & Saw Blades'}", "$lang{'Presses & Lathes'}", 
+"$lang{'Rotary Tools & Oscillating Tools'}", "$lang{'Routers & Router Bits'}", "$lang{'Sanders & Sand Paper'}",
+"$lang{'Tool Batteries & Chargers'}", "$lang{'Welding & Cutting'}"],
+
+);
+# attributes go in []
+%categoryarrayattri=("appliances" => {"appliancespartsandaccessories" => [],
+                                       "dishwashers" => [],
+                                       "freezers" => [],
+                                       "garbagedisposals"=>[],
+                                       "microwaves"=>[],
+                                       "rangehoods"=>[],
+                                       "ranges"=>[],
+                                       "smallappliances"=>[],
+                                       "vacuums"=>[],
+                                       "ovens"=>[],
+                                       "washersanddryers" => [],
+                                       "watercoolers"=>[]},
+                 "catstuff" =>{"catmeals"=>["_date","_time","_catname"],
+                "cattoys"=>[],
+                "catmedications"=>[],
+                "cathomes"=>[],
+                "catmobilehomes"=>[],
+                "catstands"=>[],
+                "catboxes"=>[]
+                },
+                "bath" =>  { "bathroomcabinets"=>[], 
+                                "bathroomfans"=>[],
+                                "faucets"=>[],
+                                "mirrors"=>[],
+                                "sinks"=>[],
+                                "bathtubs"=>[],
+                                "showersandshoweraccessories"=>[],
+                                "toiletsandtoiletseats"=>[]},
+
+                "buildingmaterials" => {"ceilings"=>[], 
+                                                   "concretecementandmasonry"=>[], 
+                                                   "decking"=>[], 
+                                                   "drywall"=>[], 
+                                                   "fireplaceaccessories"=>[],
+                                                   "glassandacrylic"=>[],
+                                                   "insulationandaccessories"=>[],
+                                                   "ladders"=>[],
+                                                   "lumber"=>[],
+                                                   "mouldingandwallpanels" =>[],
+                                                   "roofingandgutters"=>[],
+                                                   "sidingandstoneveneer"=>[],
+                                                   "stairsandrailings"=>[],
+                                                   "ventilation"=>[]},
+
+                "doorandwindows" => { "awningsandaccessories"=>[],
+                            "doors"=>[], 
+                            "exteriorshuttersandaccessories"=>[], 
+                            "garagedoorsandopeners"=>[], 
+                            "windows"=>[]}, 
+
+       "electrical"=> {"batteries"=>[], "cableandwireconnectors"=>[], 
+                       "circuitbreakers"=>[],
+                       "conduitandconduitfittings"=>[], 
+                            "dimmersandswitches"=>[], "doorbells"=>[],
+                            "electricalboxesandcovers"=>[],
+                            "electricaloutlesandadapters"=>[],
+                            "electricaltools"=>[],
+                            "extensioncords"=>[],
+                            "generators"=>[],
+                            "lightsockets"=>[],
+                            "wallplates"
+=>[]},
+
+          "flooring" => {"carpet"=>[], 
+                            "floormoulding"=>[], 
+                            "flooringtools"=>[],
+                            "hardwoodflooring"=>[],
+                            "rugs"=>[],
+                            "tileandstone"=>[],
+                            "vinylflooring"=>[]},
+
+          "heatingandcooling" => {"airconditioners"=>[], 
+                            "airfilters"=>[],
+                            "airpurifiers"=>[],
+                            "atticventilation"=>[],
+                            "fireplaces"=>[],
+                            "heaters"=>[], 
+                            "humidifiersanddehumidifiers"=>[],
+                            "thermostats"=>[]},
+
+          "kitchen"=> {"kitchenfaucets"=>[], "kitchensinks"=>[],
+                       "kitchencabinets"=>[],
+                       "kitchencountertops"=>[],
+                       "kitchenwalltiles" =>[]},
+
+
+          "lightingandceilingfans" => {"bathroomlighting"=>[],
+                                       "ceilingfans"=>[],
+                                       "ceilinglights"=>[],
+                                       "chandeliersandpendantlighting"=>[],
+                                       "kitchenlighting"=>[],
+                                       "lampsandlampshades"=>[],
+                                       "landscapelighting"=>[],
+                                       "lightingbulbs"=>[],
+                                       "timers" =>[]},
+ 
+          "lumberandcomposites" => {"boards"=>[],
+                                    "decking"=>[],
+                                    "fencing"=>[],
+                                    "paneling"=>[],
+                                    "plywoodandsheathing"=>[],
+                                    "shimsandwoodshingles"=>[],
+                                    "timber"=>[]},
+
+          "outdoors" => {"animalandpetcare"=>[], "birdcare"=>[],
+                         "grills"=>[],
+                         "hottubs"=>[],
+                         "patiofurniture"=>[],
+                         "playsetsandswingsets"=>[],
+                         "pools"=>[]},
+
+               "paint"  =>  {"caulking"=>[], "cleaners"=>[], "dropclothsandsheeting"=>[], "gluesandtapes"=>[], "paintandprimer"=>[], "paintbrushesrollersandkits"=>[], "paintcleanup"=>[], 
+                               "paintsprayers"=>[], "patching"=>[], "sanding"=>[],  
+                               "scrapersbladesandtools"=>[], "stainsandsealers"=>[], "thinnersandremovers"=>[]},
+
+        "plumbing"  => {"augersplungersdrainopeners"=>[], "laudrytubsandfaucets"=>[], "pipes"=>[], "plumbingtools"=>[], "pumpsandtanks"=>[], "valves"=>[], "waterfiltrationandwatersoftners"=>[], "waterheaters"=>[]},
+ 
+  "storageandorganization"  => {"closetstorage"=>[], "foldingtablesandchairs"=>[], "garagestorage"=>[], "hooksandracks"=>[],  "laudrystorage"=>[], "movingboxesandsupplies"=>[], 
+"officestorage"=>[], "shelves"=>[], "storagetotesandbaskets"=>[]},
+
+        "tools"  => {"airtoolsandcompressors"=>[], "drillanddrillbits"=>[], "greaseguns"=>[], "grindersandpolishers"=>[], "handtools"=>[], "joinersandplaners"=>[], "measuringtools"=>[], "nailersandstaplers"=>[], "powersawsandsawblades"=>[], "pressesandlathes"=>[], 
+"rotarytoolsandoscillatingtools"=>[], "routersandrouterbits"=>[], "sandersandsandpaper"=>[],
+"toolbatteriesandchargers"=>[], "weldingandcutting"=>[]},
+
+);
+
+# add attributes HERE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%categoryarrayattriname=("appliances" => {"appliancespartsandaccessories" => [],
+                                       "dishwashers" => [],
+                                       "freezers" => [],
+                                       "garbagedisposals"=>[],
+                                       "microwaves"=>[],
+                                       "rangehoods"=>[],
+                                       "ranges"=>[],
+                                       "smallappliances"=>[],
+                                       "vacuums"=>[],
+                                       "ovens"=>[],
+                                       "washersanddryers" =>[],
+                                       "watercoolers"=>[]},
+                            "catstuff"=>{
+                            "catmeals"=>["$lang{'Date:'}|8| &nbsp;&nbsp;","$lang{'Time:'}|checkbox| &nbsp;&nbsp;","$lang{'Name:'}|radio|&nbsp;&nbsp;"]
+                            
+                            },
+                "bath" =>  { "bathroomcabinets"=>[], 
+                                "bathroomfans"=>[],
+                                "faucets"=>[],
+                                "mirrors"=>[],
+                                "sinks"=>[],
+                                "bathtubs"=>[],
+                                "showersandshoweraccessories"=>[],
+                                "toiletsandtoiletseats"=>[]},
+
+                "buildingmaterials" => {"ceilings"=>[], 
+                                                   "concretecementandmasonry"=>[], 
+                                                   "decking"=>[], 
+                                                   "drywall"=>[], 
+                                                   "fireplaceaccessories"=>[],
+                                                   "glassandacrylic"=>[],
+                                                   "insulationandaccessories"=>[],
+                                                   "ladders"=>[],
+                                                   "lumber"=>[],
+                                                   "mouldingandwallpanels"=>[],
+                                                   "roofingandgutters"=>[],
+                                                   "sidingandstoneveneer"=>[],
+                                                   "stairsandrailings"=>[],
+                                                   "ventilation"=>[]},
+
+                "doorandwindows" => { "awningsandaccessories"=>[],
+                            "doors"=>[], 
+                            "exteriorshuttersandaccessories"=>[], 
+                            "garagedoorsandopeners"=>[], 
+                            "windows"=>[]}, 
+
+       "electrical"=> {"batteries"=>[], "cableandwireconnectors"=>[], 
+                       "circuitbreakers"=>[],
+                       "conduitandconduitfittings"=>[], 
+                            "dimmersandswitches"=>[], "doorbells"=>[],
+                            "electricalboxesandcovers"=>[],
+                            "electricaloutlesandadapters"=>[],
+                            "electricaltools"=>[],
+                            "extensioncords"=>[],
+                            "generators"=>[],
+                            "lightsockets"=>[],
+                            "wallplates"
+=>[]},
+
+          "flooring" => {"carpet"=>[], 
+                            "floormoulding"=>[], 
+                            "flooringtools"=>[],
+                            "hardwoodflooring"=>[],
+                            "rugs"=>[],
+                            "tileandstone"=>[],
+                            "vinylflooring"=>[]},
+
+          "heatingandcooling" => {"airconditioners"=>[], 
+                            "airfilters"=>[],
+                            "airpurifiers"=>[],
+                            "atticventilation"=>[],
+                            "fireplaces"=>[],
+                            "heaters"=>[], 
+                            "humidifiersanddehumidifiers"=>[],
+                            "thermostats"=>[]},
+
+          "kitchen"=> {"kitchenfaucets"=>[], "kitchensinks"=>[],
+                       "kitchencabinets"=>[],
+                       "kitchencountertops"=>[],
+                       "kitchenwalltiles" =>[]},
+
+
+          "lightingandceilingfans" => {"bathroomlighting"=>[],
+                                       "ceilingfans"=>[],
+                                       "ceilinglights"=>[],
+                                       "chandeliersandpendantlighting"=>[],
+                                       "kitchenlighting"=>[],
+                                       "lampsandlampshades"=>[],
+                                       "landscapelighting"=>[],
+                                       "lightingbulbs"=>[],
+                                       "timers" =>[]},
+ 
+          "lumberandcomposites" => {"boards"=>[],
+                                    "decking"=>[],
+                                    "fencing"=>[],
+                                    "paneling"=>[],
+                                    "plywoodandsheathing"=>[],
+                                    "shimsandwoodshingles"=>[],
+                                    "timber"=>[]},
+
+          "outdoors" => {"animalandpetcare"=>[], "birdcare"=>[],
+                         "grills"=>[],
+                         "hottubs"=>[],
+                         "patiofurniture"=>[],
+                         "playsetsandswingsets"=>[],
+                         "pools"=>[]},
+
+               "paint"  =>  {"caulking"=>[], "cleaners"=>[], "dropclothsandsheeting"=>[], "gluesandtapes"=>[], "paintandprimer"=>[], "paintbrushesrollersandkits"=>[], "paintcleanup"=>[], 
+                               "paintsprayers"=>[], "patching"=>[], "sanding"=>[],  
+                               "scrapersbladesandtools"=>[], "stainsandsealers"=>[], "thinnersandremovers"=>[]},
+
+        "plumbing"  => {"augersplungersdrainopeners"=>[], "laudrytubsandfaucets"=>[], "pipes"=>[], "plumbingtools"=>[], "pumpsandtanks"=>[], "valves"=>[], "waterfiltrationandwatersoftners"=>[], "waterheaters"=>[]},
+ 
+  "storageandorganization"  => {"closetstorage"=>[], "foldingtablesandchairs"=>[], "garagestorage"=>[], "hooksandracks"=>[],  "laudrystorage"=>[], "movingboxesandsupplies"=>[], 
+"officestorage"=>[], "shelves"=>[], "storagetotesandbaskets"=>[]},
+
+        "tools"  => {"airtoolsandcompressors"=>[], "drillanddrillbits"=>[], "greaseguns"=>[], "grindersandpolishers"=>[], "handtools"=>[], "joinersandplaners"=>[], "measuringtools"=>[], "nailersandstaplers"=>[], "powersawsandsawblades"=>[], "pressesandlathes"=>[], 
+"rotarytoolsandoscillatingtools"=>[], "routersandrouterbits"=>[], "sandersandsandpaper"=>[],
+"toolbatteriesandchargers"=>[], "weldingandcutting"=>[]},
+
+);
+
+
+@postdurationarray=("$lang{'One Week'}", "$lang{'Two Weeks'}", "$lang{'One Month'}", "$lang{'Two Months'}", "$lang{'Three Months'}" , "$lang{'Six Months'}",  
+                                        "$lang{'One Year'}", "$lang{'Two Years'}", "$lang{'Three Years'}",
+                                        "$lang{'Nonexpire'}");
+
+@postdurationday=("7", "14", "0", "0", "0", "0", "0", "0", "0", "0" );
+
+$defaultpostdurationday= ("0");                 
+
+
+@postdurationmonth=("0", "0", "1", "2", "3", "6", "0", "0", "0", "0" ),
+
+
+$defaultpostdurationmonth="0";
+
+@postdurationyear=("0", "0", "0", "0", "0", "0", "1", "2", "3", "20");
+                               
+
+$defaultpostdurationyear = "20";
+
+
+@postdurationname=("oneweek", "twoweeks", "onemonth", "twomonths", "threemonths",
+                                                       "sixmonths", "oneyear", "twoyear", "threeyear",
+                                                       "nonexpire");
+
+$defaultpostdurationname = "nonexpire";
+
+
+@adpricearray=("0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00");
+
+$defaultadprice = ("0.00");
+
+
+@picpricearray=("1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00");
+                        
+
+$defaultpicprice= "1.00";
+
+#$taxrate{"kc"} = ("0.07525");
+$taxrate{"kc"} = ("0.0825");
+
+}
+
+
+1; #return true
